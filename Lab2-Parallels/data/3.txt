@@ -1,0 +1,7 @@
+﻿INSERT INTO Products (ProductName, Description, Price, QuantityInStock) VALUES ('soloma', 'rzanaya soloma', 1000, 3);
+UPDATE Products SET Price = Price + 500 WHERE ProductName = 'soloma';
+SELECT * FROM Orders WHERE UserId = 1;
+SELECT SUM(TotalCost) FROM OrderDetails WHERE OrderId = 3;
+SELECT SUM(QuantityInStock) FROM Products;
+SELECT * FROM Products ORDER BY Price DESC LIMIT 5;
+SELECT * FROM Products WHERE QuantityInStock < 5;
