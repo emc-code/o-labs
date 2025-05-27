@@ -1,5 +1,8 @@
 ﻿namespace Lab5_Solid.Player;
 
+/// <summary>
+/// Игрок - рандом
+/// </summary>
 internal class SimulationPlayer : IPlayer
 {
     private int _minValue;

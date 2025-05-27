@@ -2,6 +2,9 @@
 
 namespace Lab5_Solid.SettingsInitializer;
 
+/// <summary>
+/// Ввод настроек вручную
+/// </summary>
 internal class ConsoleInitializer : IInitializer
 {
     public SettingsDto Init()

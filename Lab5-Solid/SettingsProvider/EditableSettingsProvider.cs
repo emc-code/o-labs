@@ -3,6 +3,10 @@ using System.Text.Json;
 
 namespace Lab5_Solid.SettingsProvider;
 
+/// <summary>
+/// Для LSP
+/// Чтение\инициализация + запись настроек
+/// </summary>
 internal class EditableSettingsProvider : ReadOnlySettingsProvider
 {
     public EditableSettingsProvider(IInitializer initializer) : base(initializer)

@@ -3,6 +3,9 @@ using System.Text.Json;
 
 namespace Lab5_Solid.SettingsProvider;
 
+/// <summary>
+/// Чтение\инициализация настроек
+/// </summary>
 internal class ReadOnlySettingsProvider : ISettingsProvider
 {
     private readonly IInitializer _initializer;

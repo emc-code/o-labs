@@ -2,6 +2,9 @@
 
 namespace Lab5_Solid.SettingsInitializer;
 
+/// <summary>
+/// Генерация настроек рандомно
+/// </summary>
 internal class RandomInitializer : IInitializer
 {
     public SettingsDto Init()

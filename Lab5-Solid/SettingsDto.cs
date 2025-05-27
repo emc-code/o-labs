@@ -1,5 +1,8 @@
 ﻿namespace Lab5_Solid;
 
+/// <summary>
+/// настройки игры
+/// </summary>
 public class SettingsDto
 {
     public int MinValue { get; init; } = int.MinValue;
