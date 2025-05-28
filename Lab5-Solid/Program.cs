@@ -20,9 +20,9 @@ using Lab5_Solid.SettingsProvider;
 /// 
 
 IInitializer initializer = new RandomInitializer();
-ISettingsProvider settingsProvider = new EditableSettingsProvider(initializer);
+ISettingsReader settingsProvider = new ReadWriteSettingsProvider(initializer);
 
-var settings = settingsProvider.LoadSettings(string.Empty);
+var settings = settingsProvider.ReadSettings(string.Empty);
 
 IPlayer player = new SimulationPlayer(settings.MinValue, settings.MaxValue);
 

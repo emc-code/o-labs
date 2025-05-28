@@ -6,12 +6,12 @@ namespace Lab5_Solid.SettingsProvider;
 /// <summary>
 /// Чтение\инициализация настроек
 /// </summary>
-internal class ReadOnlySettingsProvider : ISettingsProvider
+internal class ReadOnlySettingsProvider : ISettingsReader
 {
     private readonly IInitializer _initializer;
     public ReadOnlySettingsProvider(IInitializer initializer) => _initializer = initializer;
 
-    public SettingsDto LoadSettings(string filePath)
+    public SettingsDto ReadSettings(string filePath)
     {
         if (!File.Exists(filePath))
             return _initializer.Init();

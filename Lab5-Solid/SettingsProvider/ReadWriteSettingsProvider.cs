@@ -7,12 +7,12 @@ namespace Lab5_Solid.SettingsProvider;
 /// Для LSP
 /// Чтение\инициализация + запись настроек
 /// </summary>
-internal class EditableSettingsProvider : ReadOnlySettingsProvider, ISettingsSaver
+internal class ReadWriteSettingsProvider : ReadOnlySettingsProvider, ISettingsWriter
 {
-    public EditableSettingsProvider(IInitializer initializer) : base(initializer)
+    public ReadWriteSettingsProvider(IInitializer initializer) : base(initializer)
     { }
 
-    public void SaveSettings(SettingsDto settings, string filePath)
+    public void WriteSettings(SettingsDto settings, string filePath)
     {
         var json = JsonSerializer.Serialize(settings, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(filePath, json);
