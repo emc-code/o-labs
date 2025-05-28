@@ -7,7 +7,7 @@ namespace Lab5_Solid.SettingsProvider;
 /// Для LSP
 /// Чтение\инициализация + запись настроек
 /// </summary>
-internal class EditableSettingsProvider : ReadOnlySettingsProvider
+internal class EditableSettingsProvider : ReadOnlySettingsProvider, ISettingsSaver
 {
     public EditableSettingsProvider(IInitializer initializer) : base(initializer)
     { }

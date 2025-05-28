@@ -1,9 +1,11 @@
-﻿namespace Lab5_Solid.Player;
+﻿using Lab5_Solid.Common;
+
+namespace Lab5_Solid.Player;
 
 /// <summary>
 /// Игрок - рандом
 /// </summary>
-internal class SimulationPlayer : IPlayer
+internal class SimulationPlayer : IPlayer, IRandom
 {
     private int _minValue;
     private int _maxValue;
@@ -11,5 +13,8 @@ internal class SimulationPlayer : IPlayer
 
     public SimulationPlayer(int minValue, int maxValue) =>
         (_minValue, _maxValue, _random) = (minValue, maxValue, new Random());
-    public int InputValue() => _random.Next(_minValue, _maxValue);
+
+    public int GetRandomValue(int minValue, int maxValue) => new Random().Next(minValue, maxValue);
+
+    public int InputValue() => GetRandomValue(_minValue, _maxValue);
 }

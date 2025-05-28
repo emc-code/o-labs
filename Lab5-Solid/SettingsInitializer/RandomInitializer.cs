@@ -1,12 +1,16 @@
-﻿using Lab5_Solid.SettingsGenerator;
+﻿using Lab5_Solid.Common;
+using Lab5_Solid.SettingsGenerator;
 
 namespace Lab5_Solid.SettingsInitializer;
 
 /// <summary>
 /// Генерация настроек рандомно
 /// </summary>
-internal class RandomInitializer : IInitializer
+internal class RandomInitializer : IInitializer, IRandom
 {
+    public int GetRandomValue(int minValue, int maxValue) =>
+        new Random().Next(minValue, maxValue);
+
     public SettingsDto Init()
     {
         Random random = new();
